@@ -46,3 +46,9 @@ void Imagem::salvar() {
     imwrite(local, matProc);
 
 }
+
+const char* Imagem::getLocal() {
+
+    return local;
+
+}

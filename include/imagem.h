@@ -33,6 +33,8 @@ class Imagem {
 
         void converter(const string output);
 
+        const char* getLocal();
+
 };
 
 

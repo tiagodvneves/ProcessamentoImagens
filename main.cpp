@@ -27,8 +27,9 @@ int main(int argc, char **argv)
 
         } else if (strcmp(argv[1], "converter") == 0){
 
-            string formato (argv[3]);
+            char* formato = argv[3];
 
+            char* local = imagem.getLocal();
 
         }
 
