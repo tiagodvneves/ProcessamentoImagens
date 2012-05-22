@@ -27,14 +27,16 @@ int main(int argc, char **argv)
 
         } else if (strcmp(argv[1], "converter") == 0){
 
-            char* formato = argv[3];
+            const char* formatoConst = argv[3];
 
-            char* local = imagem.getLocal();
+            const char* localConst = imagem.getLocal();
+
+            imagem.converter(trocarExtensao(&localConst[0], &formatoConst[0]));
 
         }
 
-        Imagem imagem2("imagens/Penguins.jpg");
-        imagem2.converter("imagens/Penguins.png");
+        //Imagem imagem2("imagens/Penguins.jpg");
+        //imagem2.converter("imagens/Penguins.png");
 
         //MyFrame1 frame(NULL);
 
@@ -45,6 +47,20 @@ int main(int argc, char **argv)
     }
 
     return 0;
+}
+
+const char* trocarExtensao(char* local, char* extensao) {
+
+    char* ultimoPonto = strrchr(local, '.');
+
+    char* localSemExtensao;
+
+    strncpy(localSemExtensao, local, ultimoPonto - local);
+
+    strcpy(localSemExtensao, ultimoPonto);
+
+    return &localSemExtensao[0];
+
 }
 
 /*#include <iostream>
