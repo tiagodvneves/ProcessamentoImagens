@@ -7,6 +7,8 @@
 
 using namespace std;
 
+const char* trocarExtensao(char* local, char* extensao);
+
 int main(int argc, char **argv)
 {
 
