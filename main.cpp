@@ -33,7 +33,7 @@ int main(int argc, char **argv)
 
             const char* localConst = imagem.getLocal();
 
-            imagem.converter(trocarExtensao((char*)localConst, (char*)formatoConst);
+            imagem.converter(trocarExtensao((char*)localConst, (char*)formatoConst));
 
         }
 
